@@ -74,6 +74,19 @@ export const Fieldset = styled.fieldset`
     input::placeholder{
       color: #A0A0B2;
     }
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      flex: 1;
+      background: #F0F0F5;
+      border-radius: 8px;
+      border: 0;
+      padding: 16px 24px;
+      font-size: 16px;
+      color: #6C6C80;
+    }
   }
 
   div.field-group{
@@ -86,6 +99,44 @@ export const Fieldset = styled.fieldset`
 
     input + input {
       margin-left: 24px;
+    }
+  }
+`;
+
+export const ItemsGroup = styled.ul`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  list-style: none;
+
+  li {
+    background: #f5f5f5;
+    border: 2px solid #f5f5f5;
+    height: 180px;
+    border-radius: 8px;
+    padding: 32px 24px 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    span {
+      flex: 1;
+      margin-top: 12px;
+
+      display: flex;
+      align-items: center;
+      color: var(--title-color)
+    }
+
+    &.selected{
+      background: #E1FAEC;
+      border: 2px solid #34CB79;
     }
   }
 
